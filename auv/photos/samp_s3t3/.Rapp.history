@@ -1,0 +1,331 @@
+names(IP)
+IP$Package
+length(IP)
+dim(IP)
+14*7
+?gep
+?geo
+library(geo)
+?geo
+geo()
+??geo
+?write
+write(IP, file="pkgs")
+is.ist(IP)
+is.list(IP)
+is.data.frame(IP)
+write(IP, file="pkgs", sep="\t")
+pkg <- data.frame(IP$Package)
+pkg
+is.list(pkg)
+write(pkg, file="pkgs", sep="\t")
+?unlist
+pkg <- unlist(pkg)
+write(pkg, file="pkgs", sep="\t")
+pkg
+as.data.frame(pkg)
+write(pkg, file="pkgs", sep="\t")
+pkg <- as.data.frame(pkg)
+write(pkg, file="pkgs", sep="\t")
+pkg <- unlist(pkg)
+write(pkg, file="pkgs", sep="\t")
+MyPkgs
+save(MyPkgs, "MyPkgs.Rdata")
+?save
+save(MyPkgs, file="MyPkgs.Rdata")
+load("/Users/warsha/MyPkgs.Rdata")
+?update
+library(EBImage)
+library(geo)
+load("/Users/warsha/MyPkgs.Rdata")
+install.packages(MyPkgs$Package, dependencies = TRUE)
+source("http://www.bioconductor.org/biocLite.R")
+biocLite("EBImage")
+library(EBImage)
+library(vegan)
+install.packages("vegan")
+install.packages("geo")
+source("http://www.bioconductor.org/biocLite.R")#
+    biocLite("EBImage")
+install.packages("geo")
+install.packages("mapdata")
+library(mapdata)
+?mapdata
+??mapdata
+search.packages()
+??search.packages()
+??search
+install.packages("geo")
+install.packages("geo", repos="http://r-forge.r-project.org")
+install.packages("geo", repos="http://r-forge.r-project.org", type="source")
+library(geo)
+geopoints
+?geopoints
+?geolines
+install.packages("EBImage")
+install.packages("EBImage", repos="http://www.bioconductor.org/biocLite.R", type="source")
+install.packages("geo", repos="http://r-forge.r-project.org", type="source")
+library(geo)
+geo()
+?geo
+install.packages("sp")
+library(sp)
+?sp
+install.packages("fields")
+install.packages("gmt")
+install.packages("gridExtra")
+install.packages("mapdata")
+install.packages("mapproj")
+install.packages("maps")
+install.packages("maptools")
+install.packages("ncdf")
+install.packages("PBSmapping")
+install.packages("raster")
+install.packages("rgdal")
+install.packages("RgoogleMaps")
+install.packages("trip")
+install.packages("rgdal", repos="http://sourceforge.net/projects/rgdal/", type="source")
+setRepositories(ind=1:2)#
+install.packages(“rgdal”)
+setRepositories(ind=1:2)
+install.packages("rgdal")
+library(rgdal)
+?rgdal
+??rgdal
+require(rgdal)
+?library
+install.packages("pvclust")
+install.packages("vegan")
+install.packages("gplots")
+install.packages("faraway")
+install.packages("nlme")
+install.packages("lme4")
+install.packages("XML")
+install.packages("xtable")
+install.packages("ReadImages")
+install.packages("cluster")
+install.packages("gtools")
+mypkg <- as.data.frame(installed.packages())
+mypkg
+install.packages("gmodels")
+install.packages("rimage")
+install.packages("pixmap")
+source("http://bioconductor.org/biocLite.R")
+biocLite("EBImage")
+library(EBImage)
+?readImage
+?EBImage
+example(readImage)
+?locator
+identifyPch <- function(x, y=NULL, n=length(x), pch=19, ...)#
+{#
+    xy <- xy.coords(x, y); x <- xy$x; y <- xy$y#
+    sel <- rep(FALSE, length(x)); res <- integer(0)#
+    while(sum(sel) < n) {#
+        ans <- identify(x[!sel], y[!sel], n=1, plot=FALSE, ...)#
+        if(!length(ans)) break#
+        ans <- which(!sel)[ans]#
+        points(x[ans], y[ans], pch = pch)#
+        sel[ans] <- TRUE#
+        res <- c(res, ans)#
+    }#
+    res#
+}
+identifyPch
+library(ReadImages)
+I <- read.jpeg('/Users/warsha/Dropbox/bf-pics/frame012810_0_n.jpg')
+dev.new()
+plot(I)
+identifyPch(I)
+dat <- identify(I)
+?identify
+plot(I)
+dat <- identify(I, y=NULL, labels = seq_along(x), n=length(x), pos=TRUE, plot=TRUE)
+dim(I)
+dat <- identify(x=1200, y=1600, labels = seq_along(x), n=length(x), pos=TRUE, plot=TRUE)
+dat <- identify(I, y=NULL, labels=1:100,n=100, pos=TRUE, plot=TRUE)
+data <- locator(type ='o',pch=0.4,col='red',lwd=0.4,cex=0.1)
+?locator
+data
+data <- as.data.frame(data)
+rect(data$x[1]*2, data$y[1]*2, data$x[2]*, data$y[2]*2)
+rect(data$x[1], data$y[1], data$x[2], data$y[2])
+?rect
+10*(0)
+10*(0:5)
+i<-10*(0:5)
+100+i
+rect((data$x[1])-i, (data$y[1])-i, (data$x[2])+i, (data$y[2])+i)
+i <- 100
+plot(I)
+data <- locator(type ='p',pch=0.4,col='red',lwd=0.4,cex=0.1)
+data <- as.data.frame(data)
+data
+i <- 100
+rect((data$x[1])-i, (data$y[1])-i, (data$x[2])+i, (data$y[2])+i)
+i <- 50
+rect((data$x[1])-i, (data$y[1])-i, (data$x[2])+i, (data$y[2])+i)
+i <- 30
+rect((data$x[1])-i, (data$y[1])-i, (data$x[2])+i, (data$y[2])+i)
+i <- 50
+rect((data$x[1])-i, (data$y[1])-i, (data$x[2])+i, (data$y[2])+i)
+rect((data$x[3])-i, (data$y[3])-i, (data$x[4])+i, (data$y[4])+i)
+plot(I)
+data <- locator(type ='p',pch=0.4,col='red',lwd=0.4,cex=0.1)
+data <- as.data.frame(data)
+data
+i <- 50
+rect((data$x[1])-i, (data$y[1])-i, (data$x[1])+i, (data$y[4])+i)
+rect((data$x[1])-i, (data$y[1])-i, (data$x[1])+i, (data$y[1])+i)
+rect((data$x[2])-i, (data$y[2])-i, (data$x[2])+i, (data$y[2])+i)
+rect((data$x[3])-i, (data$y[3])-i, (data$x[3])+i, (data$y[3])+i)
+i <- 60
+rect((data$x[3])-i, (data$y[3])-i, (data$x[3])+i, (data$y[3])+i)
+i <- 60#
+for (a in 1:length(data$x)){#
+	for (b in 1:length(data$y)){#
+rect((data$x[a])-i, (data$y[b])-i, (data$x[a])+i, (data$y[b])+i)	}#
+}
+plot(I)
+data <- locator(type ='p',pch=0.4,col='red',lwd=0.4,cex=0.1)
+data <- as.data.frame(data)
+data
+i <- 60#
+for (a in 1:length(data$x)){#
+	for (b in 1:length(data$y)){#
+rect((data$x[a])-i, (data$y[b])-i, (data$x[a])+i, (data$y[b])+i)	}#
+}
+plot(I)
+data <- locator(type ='p',pch=0.4,col='red',lwd=0.4,cex=0.1)
+data <- as.data.frame(data)
+i <- 60#
+for (a in data$x){#
+	for (b in data$y){#
+#rect((data$x[a])-i, (data$y[b])-i, (data$x[a])+i, (data$y[b])+i)	#
+rect(a-i, b-i, a+i, b+i)#
+}#
+#
+}
+plot(I)
+data <- locator(type ='p',pch=0.4,col='red',lwd=0.4,cex=0.1)
+data <- as.data.frame(data)
+i <- 60#
+for (a in data$x){#
+	for (b in data$y){#
+rect((data$x[a])-i, (data$y[b])-i, (data$x[a])+i, (data$y[b])+i)	#
+#rect(a-i, b-i, a+i, b+i)#
+}#
+}
+plot(I)
+zoomplot( locator(2) )
+install.packages("TeachingDemos")
+library("TeachingDemos")
+zoomplot( locator(2) )
+plot( 1:10, rnorm(10) )#
+tmp <- rnorm(10,1,3)#
+lines( (1:10) + 0.5, tmp, col='red' )#
+zoomplot( c(0,11), range(tmp) )
+plot( 1:10, rnorm(10) )
+tmp <- rnorm(10,1,3)
+lines( (1:10) + 0.5, tmp, col='red' )
+zoomplot( c(0,11), range(tmp) )
+i <- 1:100#
+y <- i*sin(i*(pi/16))#
+y <- c(rev(y),y)
+zoom(fun=plot, zoom.col="red", x=1:200, y=y, ty="l", xlab="index")
+install.packages("IDPmisc")
+library("IDPmisc")
+zoom(fun=plot, zoom.col="red", x=1:200, y=y, ty="l", xlab="index")
+g <- graph.lattice( c(5,5,5) )#
+coords <- layout.fruchterman.reingold(g, dim=3)#
+rglplot(g, layout=coords)
+install.packages("igraph")
+library("igraph")
+g <- graph.lattice( c(5,5,5) )
+coords <- layout.fruchterman.reingold(g, dim=3)#
+rglplot(g, layout=coords)
+rplplot(I)
+rglplot(I)
+I <- read.jpeg('/Users/warsha/Desktop/bf-pics/frame000760_0_en.jpg')
+I <- read.jpeg('/Users/warsha/Desktop/frame000760_0_en.jpg')
+plot(I)
+data <- locator(type ='p',pch=0.4,col='red',lwd=0.4,cex=0.1)
+data <- as.data.frame(data)
+data
+600-441
+600-454
+install.packages("geoR")
+install.packages("gstat")
+?locator
+?text
+?locator(1)
+setwd("/Users/warsha/Documents/gavia_data/111117_survey_lm_1/files/images/201111171418/")#
+files <- system("ls *.jpg", intern=T)#
+print(length(files))#
+#
+## Reading image header information#
+dat <- read.table("imgdat_1418.txt", header=T)#
+index <- 1:nrow(dat) #adding an index to frames.#
+dat <- cbind(index, dat)#
+#
+alt <- round(dat$altitude,1)#
+dat <- as.data.frame(cbind(dat, alt))#
+print(dim(dat))#
+print(names(dat))
+print(table(dat$alt))
+a <- c(1.8,1.9,2.0,2.1,2.2)
+dat.2 <- subset (dat, alt%in%a)
+print(dim(dat.2))
+samp <- sort(sample(dat.2$file, 25, replace=FALSE))
+print(samp)
+samp <- sort(sample(dat.2$file, 25, replace=FALSE))
+print(samp)
+samp <- sort(sample(dat.2$file, 25, replace=FALSE))
+print(samp)
+samp <- sort(sample(dat.2$file, 25, replace=FALSE))#
+print(samp)
+samp <- sort(sample(dat.2$file, 25, replace=FALSE))#
+print(samp)
+samp <- sort(sample(dat.2$file, 25, replace=FALSE))#
+print(samp)
+samp <- sort(sample(dat.2$file, 25, replace=FALSE))#
+print(samp)
+samp <- sort(sample(dat.2$file, 25, replace=FALSE))#
+print(samp)
+samp <- sort(sample(dat.2$file, 25, replace=FALSE))#
+print(samp)
+samp <- sort(sample(dat.2$file, 25, replace=FALSE))#
+print(samp)
+samp <- sort(sample(dat.2$file, 25, replace=FALSE))#
+print(samp)
+samp <- sort(sample(dat.2$file, 25, replace=FALSE))#
+print(samp)
+samp <- sort(sample(dat.2$file, 25, replace=FALSE))#
+print(samp)
+samp <- sort(sample(dat.2$file, 25, replace=FALSE))#
+print(samp)
+samp <- sort(sample(dat.2$file, 25, replace=FALSE))#
+print(samp)
+samp <- sort(sample(dat.2$file, 25, replace=FALSE))#
+print(samp)
+samphdr <- subset(dat.r, file%in%samp)
+write.table(samphdr, file="sampheader.txt")
+samphdr <- subset(dat, file%in%samp)
+write.table(samphdr, file="sampheader.txt")
+library(EBImage)
+names <- substr(samp,6,13)#
+im <- list()#
+for (i in names){#
+	oname = paste("frame", i, ".jpg", sep="")#
+	imgs <- assign(oname, readImage(paste("frame", i, ".jpg", sep="")))#
+	im[[i]] <- imgs#
+	}
+imcom <- combine(im)
+if (interactive()) display(imcom)
+for (i in 1:length(im)){#
+	bl <- (im[[i]]/blur(im[[i]], r=0, s=150))/2#
+	g <- (0.2+bl)^3.5#
+	fnam = paste("frame", i, ".jpg", sep="")#
+	setwd("/Users/warsha/Documents/gavia_data/111117_survey_lm_1/files/images/201111171418/samp")#
+	writeImage(g, fnam)#
+}

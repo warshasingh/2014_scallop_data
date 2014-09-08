@@ -1,0 +1,342 @@
+summary(fit1a)$r.squared
+summary(fit1a)$coef[2:6]
+fit1a <- aov(log(Weight) ~ factor(DayN), data=data)#
+TukeyHSD(fit1a, "factor(DayN)", ordered=T)#
+plot(TukeyHSD(fit1a, "factor(DayN)", ordered=T))
+plot(TukeyHSD(fit1a, "factor(DayN)", ordered=T), cex=0.8)
+plot(TukeyHSD(fit1a, "factor(DayN)", ordered=T), cex=0.5)
+plot(TukeyHSD(fit1a, "factor(DayN)", ordered=T, cex=0.5))
+plot(TukeyHSD(fit1a, "factor(DayN)", ordered=T), cex.axis=0.5)
+plot(TukeyHSD(fit1a, "factor(DayN)", ordered=T), cex.axis=0.8)
+fit2 <- lm(log(Weight) ~ Market + factor(DayN), data=data)#
+anova(fit2, test="F")
+summary(fit2)$coef
+summary(fit2)$r.squared
+plot(fit2)
+fit1a <- lm(log(Weight) ~ factor(DayN), data=data)
+anova(fit1a, test="F")
+fit2 <- lm(log(Weight) ~ Market + factor(DayN), data=data)
+anova(fit2, test="F")
+fit2 <- aov(log(Weight) ~ Market + factor(DayN), data=data)
+summary(fit2)
+TukeyHSD(fit2, ordered=T)
+plot(TukeyHSD(fit2, ordered=T))
+plot(TukeyHSD(fit2, ordered=T, conf.level=0.9))
+plot(TukeyHSD(fit2, ordered=T))
+fit2a <- lm(log(Weight) ~ factor(DayN) + factor(MonthN), data=data)
+anova(fit2a, test="F")
+fit2b <- lm(log(Weight) ~ factor(DayN)*Market, data=data)
+anova(fit2b, test="F")
+summary(fit2b)
+summary(fit2b)$coef
+summary(fit2b)$r.squared
+fit1 <- lm(log(Weight) ~ Market, data=data)
+anova(fit1, test="F")
+15.1498/0.8209
+67.311/82
+attach("~/Documents/yvonne/tip01")
+attach("~/Documents/yvonne/tip01.RData")
+effort <- tip11
+head(effort)
+dim(tip01)
+catch <- tip21
+head(catch)
+dat <- read.csv("~/Documents/yvonne/tmp.csv")
+head(dat)
+dim(dat)
+floor(dat$date)
+?floor
+floor(as.numeric(dat$date))
+dat$date
+head(dat)
+dat$siteID
+unique(dat$siteID)
+count(uniuqe(dat$siteID))
+names(dat)
+hist(dat$tw, dat$siteID=="DENN")
+is.factor(dat$tW)
+is.factor(dat$siteID)
+hist(dat$tw[dat$siteID=="DENN"])
+hist(dat$tW[dat$siteID=="DENN"])
+hist(log(dat$tW[dat$siteID=="DENN"]))
+par(mfrow=c(1,2))#
+hist(dat$tW[dat$siteID=="DENN"])#
+hist(log(dat$tW[dat$siteID=="DENN"]))
+fit1 <- lm(log(dat$tW) ~ dat$siteID, data=dat)
+anova(fit1, test="F")
+summary(fit1)$r.squared
+summary(fit1)$coef
+par(mfrow=c(1,2))
+hist(dat$tW[dat$siteID=="DENN"])
+hist(log(dat$tW[dat$siteID=="DENN"]))
+anova(fit1, test="F")
+fit1 <- aov(log(dat$tW) ~ dat$siteID, data=dat)
+TukeyHSD(fit1, "dat$siteID", ordered=T)
+plot(TukeyHSD(fit1, "dat$siteID"))
+plot(TukeyHSD(fit1, "dat$siteID"), cex.axis=0.5)
+anova(fit1, test="F")
+811.19/12
+420.21/1195
+67.599/0.352
+dat <- dat[dat$siteID!=c("RIDO","SABA"),]
+catch <- dat[dat$siteID!="RIDO",]
+dim(catch)
+ex <- names(dat$siteID) %in% c("RIDO", "SABA")
+tc <- dat[!ex]
+dim(tc)
+tc <- dat[dat$siteID!="RIDO",]
+tc <- tc[tc$siteID!="SABA",]
+dim(tc)
+ex <- names(dat$siteID) %in% c("RIDO", "SABA")
+catch <- dat$siteID[!ex]
+dim(catch)
+data<-read.table("~/Documents/unuftp/data/Market.dat", header=T)
+names(data)
+names(dat)
+tmp <- data.frame(siteID=c("DENN", "GRIS", "OTHER", "VIFO", "CASF", "MICO",  "SOUF", "CAST", "CHOI",  "LABO",  "ALRA "), site = 1:11)
+tc <- merge(dat, tmp, by="siteID", all.x=T)
+head(tc)
+tc <- dat[dat$siteID!="RIDO",]
+tc <- tc[tc$siteID!="SABA",]
+tmp <- data.frame(siteID = c("DENN", "GRIS", "OTHER", "VIFO", "CASF", "MICO",  "SOUF", "CAST", "CHOI",  "LABO",  "ALRA"), site = 1:11)
+tc <- merge(tc, tmp, by="siteID", all.x=T)
+head(tc)
+tmp <- data.frame(siteID = c("ALRA", "CASF", "CAST", "CHOI", "DENN", "GRIS", "LABO", "MICO", "SOUF", "VIFO","OTHER"), site = 1:11)
+tc <- merge(tc, tmp, by="siteID", all.x=T)
+head(tc)
+dat$date
+?substr
+substr("abcdef",2,4)
+substr(dat$date,6,7)
+as.numeric(substr(dat$date,6,7))
+month <- as.numeric(substr(dat$date,6,7)))
+month <- as.numeric(substr(dat$date,6,7))
+names(dat)
+?subset
+dat <- cbind(dat, month)
+head(dat)
+tmp <- data.frame(siteID = c("ALRA", "CASF", "CAST", "CHOI", "DENN", "GRIS", "LABO", "MICO", "SOUF", "VIFO","OTHER"), site = 1:11)
+tmp
+tc <- subset(dat, siteID%in%temp$siteID)
+tc <- subset(dat, siteID%in%tmp$siteID)
+dim(tc)
+?ttest
+names(dat)
+path<-'../SimulationModel'
+gpar<-gadget.read.par(path, '/params.out')
+library(gadget)
+library(gadgetR)
+library(gadget.R)
+library("gadgetR")
+?library()
+library(gadgetR)
+library(GadgetR)
+setwd("/Users/warsha/Documents/gavia_data/111118_sidescan/files/images/201111181230/")
+run <- read.table("sampheader_1230.txt", header=T)
+run <- read.table("sampheader_1830.txt", header=T)
+samp <- run$file
+library(EBImage)
+names <- substr(samp,6,13)
+im <- list()#
+for (i in names){#
+	oname = paste("frame", i, ".jpg", sep="")#
+	imgs <- assign(oname, readImage(paste("frame", i, ".jpg", sep="")))#
+	im[[i]] <- imgs#
+	}
+for (i in 1:length(im)){#
+	bl <- (im[[i]]/blur(im[[i]], r=0, s=150))/2#
+	g <- (0.2+bl)^3.5#
+	fnam = paste("frame", i, ".jpg", sep="")#
+	setwd("/Users/warsha/Documents/gavia_data/111118_sidescan/files/images/201111181230/samp")#
+	writeImage(g, fnam)#
+}
+setwd("/Users/warsha/Documents/gavia_data/111117_survey_lm_1/files/images/201111171230/")
+dat <- read.table("imgdat_1230.txt", header=T)
+dat <- read.table("imgdat_1230.txt", header=T)#
+index <- 1:nrow(dat) #adding an index to frames.#
+dat <- cbind(index, dat)#
+#
+alt <- round(dat$altitude,1)#
+dat <- as.data.frame(cbind(dat, alt))#
+print(dim(dat))#
+print(names(dat))#
+print(table(dat$alt))#
+#
+a <- c(1.8,1.9,2.0,2.1,2.2)#
+dat.2 <- subset (dat, alt%in%a)#
+print(dim(dat.2))#
+print(dat.2$file)
+b <- dat.2$file[seq(2, length(dat.2$file), 3)]
+samp <- b
+names <- substr(samp,6,13)
+names
+im <- list()#
+for (i in names){#
+	oname = paste("frame", i, ".jpg", sep="")#
+	imgs <- assign(oname, readImage(paste("frame", i, ".jpg", sep="")))#
+	im[[i]] <- imgs#
+	}
+#
+for (i in 1:length(im)){#
+	bl <- (im[[i]]/blur(im[[i]], r=0, s=150))/2#
+	g <- (0.2+bl)^3.5#
+	fnam = paste("frame", i, ".jpg", sep="")#
+	setwd("/Users/warsha/Documents/gavia_data/111117_survey_lm_1/files/images/201111171230/samp")#
+	writeImage(g, fnam)#
+}
+imcom <- combine(im)
+if (interactive()) display(imcom)
+setwd("/Users/warsha/Documents/gavia_data/111117_survey_lm_1/files/images/201111171241/")
+dat <- read.table("imgdat_1241.txt", header=T)
+index <- 1:nrow(dat) #adding an index to frames.#
+dat <- cbind(index, dat)#
+#
+alt <- round(dat$altitude,1)#
+dat <- as.data.frame(cbind(dat, alt))#
+print(dim(dat))#
+print(names(dat))#
+print(table(dat$alt))#
+#
+a <- c(1.8,1.9,2.0,2.1,2.2)#
+dat.2 <- subset (dat, alt%in%a)#
+print(dim(dat.2))
+print(dat.2$file)
+samp <- sort(sample(dat.2$file, 25, replace=FALSE))
+samp
+samp <- sort(sample(dat.2$file, 25, replace=FALSE))
+samp
+dim(dat.2)
+samp <- sort(sample(dat.2$file, 25, replace=FALSE))
+samp
+dat.2$file
+samp <- sort(sample(dat.2$file, 25, replace=FALSE))
+print(samp)
+samp <- sort(sample(dat.2$file, 25, replace=FALSE))
+print(samp)
+samp <- sort(sample(dat.2$file, 25, replace=FALSE))
+print(samp)
+199/3
+samp <- sort(sample(dat.2$file, 25, replace=FALSE))
+199/3
+print(samp)
+print(dat.2$file)
+a <- c(1.8,1.9,2.0,2.1,2.2)
+dat.2 <- subset (dat, alt%in%a)
+print(dim(dat.2))
+print(dat.2$file)
+b <- dat.2$file[seq(11, length(dat.2$file), 3)]
+b
+samp <- sort(sample(b, 25, replace=FALSE))
+samp
+library(EBImage)
+names <- substr(samp,6,13)#
+im <- list()#
+for (i in names){#
+	oname = paste("frame", i, ".jpg", sep="")#
+	imgs <- assign(oname, readImage(paste("frame", i, ".jpg", sep="")))#
+	im[[i]] <- imgs#
+	}
+samphdr <- subset(dat, file%in%samp)
+write.table(samphdr, file="sampheader_1241.txt")
+samphdr
+samphdr$pitch
+samphdr$roll
+b
+samp
+dat.2$file
+b <- dat.2$file[seq(19, length(dat.2$file), 3)]
+samp <- sort(sample(b, 25, replace=FALSE))
+print(samp)
+samphdr <- subset(dat, file%in%samp)
+write.table(samphdr, file="sampheader_1241.txt")
+samphdr$roll
+samphdr$pitch
+b <- dat.2$file[seq(25, length(dat.2$file), 3)]
+samp <- sort(sample(b, 25, replace=FALSE))
+print(samp)
+samphdr <- subset(dat, file%in%samp)
+write.table(samphdr, file="sampheader_1241.txt")
+samphdr$pitch
+samphdr$roll
+samp
+samphdr <- subset(dat, file%in%samp)
+write.table(samphdr, file="sampheader_1241.txt")
+names <- substr(samp,6,13)
+im <- list()#
+for (i in names){#
+	oname = paste("frame", i, ".jpg", sep="")#
+	imgs <- assign(oname, readImage(paste("frame", i, ".jpg", sep="")))#
+	im[[i]] <- imgs#
+	}
+for (i in 1:length(im)){#
+	bl <- (im[[i]]/blur(im[[i]], r=0, s=150))/2#
+	g <- (0.2+bl)^3.5#
+	fnam = paste("frame", i, ".jpg", sep="")#
+	setwd("/Users/warsha/Documents/gavia_data/111117_survey_lm_1/files/images/201111171241/samp")#
+	writeImage(g, fnam)#
+}
+setwd("/Users/warsha/Documents/gavia_data/111117_survey_lm_1/files/images/201111171236/")
+dat <- read.table("imgdat_1236.txt", header=T)
+index <- 1:nrow(dat) #adding an index to frames.#
+dat <- cbind(index, dat)#
+#
+alt <- round(dat$altitude,1)#
+dat <- as.data.frame(cbind(dat, alt))#
+print(dim(dat))#
+print(names(dat))#
+print(table(dat$alt))#
+#
+a <- c(1.8,1.9,2.0,2.1,2.2)#
+dat.2 <- subset (dat, alt%in%a)#
+print(dim(dat.2))#
+print(dat.2$file)
+samp <- sort(sample(dat.2$file, 25, replace=FALSE))
+print(samp)
+samp <- sort(sample(dat.2$file, 25, replace=FALSE))
+print(samp)
+samp <- sort(sample(dat.2$file, 25, replace=FALSE))
+print(samp)
+samp <- sort(sample(dat.2$file, 25, replace=FALSE))
+print(samp)
+dat.2$pitch
+hist(dat.2$pitch)
+hist(dat.2$roll)
+b <- dat.2$file[seq(6, length(dat.2$file), 3)]
+samp <- sort(sample(b, 25, replace=FALSE))
+print(samp)
+samp <- sort(sample(b, 25, replace=FALSE))
+print(samp)
+samp[-24]
+dat.2$file
+dat.2$file[239]
+samp.1 <- c(samp[-24], dat.2$file[239])
+samp.1
+samp.1 <- as.vector(c(samp[-24], dat.2$file[239]))
+samp.1
+samp.1 <- samp[-24]
+samp.1
+samp.f <- c(samp.1, as.vector(dat.2$file[239]))
+samp.f
+samp.f <- c(as.vector(samp.1), as.vector(dat.2$file[239]))
+samp.f
+samp <- samp.f
+samp
+samphdr <- subset(dat, file%in%samp)
+write.table(samphdr, file="sampheader_1236.txt")
+names <- substr(samp,6,13)
+names
+im <- list()#
+for (i in names){#
+	oname = paste("frame", i, ".jpg", sep="")#
+	imgs <- assign(oname, readImage(paste("frame", i, ".jpg", sep="")))#
+	im[[i]] <- imgs#
+	}
+for (i in 1:length(im)){#
+	bl <- (im[[i]]/blur(im[[i]], r=0, s=150))/2#
+	g <- (0.2+bl)^3.5#
+	fnam = paste("frame", i, ".jpg", sep="")#
+	setwd("/Users/warsha/Documents/gavia_data/111117_survey_lm_1/files/images/201111171236/samp")#
+	writeImage(g, fnam)#
+}
+imcom <- combine(im)
+if (interactive()) display(imcom)

@@ -1,0 +1,565 @@
+100+i
+rect((data$x[1])-i, (data$y[1])-i, (data$x[2])+i, (data$y[2])+i)
+i <- 100
+plot(I)
+data <- locator(type ='p',pch=0.4,col='red',lwd=0.4,cex=0.1)
+data <- as.data.frame(data)
+data
+i <- 100
+rect((data$x[1])-i, (data$y[1])-i, (data$x[2])+i, (data$y[2])+i)
+i <- 50
+rect((data$x[1])-i, (data$y[1])-i, (data$x[2])+i, (data$y[2])+i)
+i <- 30
+rect((data$x[1])-i, (data$y[1])-i, (data$x[2])+i, (data$y[2])+i)
+i <- 50
+rect((data$x[1])-i, (data$y[1])-i, (data$x[2])+i, (data$y[2])+i)
+rect((data$x[3])-i, (data$y[3])-i, (data$x[4])+i, (data$y[4])+i)
+plot(I)
+data <- locator(type ='p',pch=0.4,col='red',lwd=0.4,cex=0.1)
+data <- as.data.frame(data)
+data
+i <- 50
+rect((data$x[1])-i, (data$y[1])-i, (data$x[1])+i, (data$y[4])+i)
+rect((data$x[1])-i, (data$y[1])-i, (data$x[1])+i, (data$y[1])+i)
+rect((data$x[2])-i, (data$y[2])-i, (data$x[2])+i, (data$y[2])+i)
+rect((data$x[3])-i, (data$y[3])-i, (data$x[3])+i, (data$y[3])+i)
+i <- 60
+rect((data$x[3])-i, (data$y[3])-i, (data$x[3])+i, (data$y[3])+i)
+i <- 60#
+for (a in 1:length(data$x)){#
+	for (b in 1:length(data$y)){#
+rect((data$x[a])-i, (data$y[b])-i, (data$x[a])+i, (data$y[b])+i)	}#
+}
+plot(I)
+data <- locator(type ='p',pch=0.4,col='red',lwd=0.4,cex=0.1)
+data <- as.data.frame(data)
+data
+i <- 60#
+for (a in 1:length(data$x)){#
+	for (b in 1:length(data$y)){#
+rect((data$x[a])-i, (data$y[b])-i, (data$x[a])+i, (data$y[b])+i)	}#
+}
+plot(I)
+data <- locator(type ='p',pch=0.4,col='red',lwd=0.4,cex=0.1)
+data <- as.data.frame(data)
+i <- 60#
+for (a in data$x){#
+	for (b in data$y){#
+#rect((data$x[a])-i, (data$y[b])-i, (data$x[a])+i, (data$y[b])+i)	#
+rect(a-i, b-i, a+i, b+i)#
+}#
+#
+}
+plot(I)
+data <- locator(type ='p',pch=0.4,col='red',lwd=0.4,cex=0.1)
+data <- as.data.frame(data)
+i <- 60#
+for (a in data$x){#
+	for (b in data$y){#
+rect((data$x[a])-i, (data$y[b])-i, (data$x[a])+i, (data$y[b])+i)	#
+#rect(a-i, b-i, a+i, b+i)#
+}#
+}
+plot(I)
+zoomplot( locator(2) )
+install.packages("TeachingDemos")
+library("TeachingDemos")
+zoomplot( locator(2) )
+plot( 1:10, rnorm(10) )#
+tmp <- rnorm(10,1,3)#
+lines( (1:10) + 0.5, tmp, col='red' )#
+zoomplot( c(0,11), range(tmp) )
+plot( 1:10, rnorm(10) )
+tmp <- rnorm(10,1,3)
+lines( (1:10) + 0.5, tmp, col='red' )
+zoomplot( c(0,11), range(tmp) )
+i <- 1:100#
+y <- i*sin(i*(pi/16))#
+y <- c(rev(y),y)
+zoom(fun=plot, zoom.col="red", x=1:200, y=y, ty="l", xlab="index")
+install.packages("IDPmisc")
+library("IDPmisc")
+zoom(fun=plot, zoom.col="red", x=1:200, y=y, ty="l", xlab="index")
+g <- graph.lattice( c(5,5,5) )#
+coords <- layout.fruchterman.reingold(g, dim=3)#
+rglplot(g, layout=coords)
+install.packages("igraph")
+library("igraph")
+g <- graph.lattice( c(5,5,5) )
+coords <- layout.fruchterman.reingold(g, dim=3)#
+rglplot(g, layout=coords)
+rplplot(I)
+rglplot(I)
+I <- read.jpeg('/Users/warsha/Desktop/bf-pics/frame000760_0_en.jpg')
+I <- read.jpeg('/Users/warsha/Desktop/frame000760_0_en.jpg')
+plot(I)
+data <- locator(type ='p',pch=0.4,col='red',lwd=0.4,cex=0.1)
+data <- as.data.frame(data)
+data
+600-441
+600-454
+install.packages("geoR")
+install.packages("gstat")
+setwd("/User/warsha/Desktop/images")
+?setwd
+setwd("/Usr/warsha/Desktop/images")
+setwd("User/warsha/Desktop/images")
+system(pwd)
+system("pwd")
+system("ls")
+files <- system("ls *.jpeg", intern=T)
+files <- system("ls *.jpg", intern=T)
+files
+names <- substr(filenames,5,8)
+filesnames <- system("ls *.jpg", intern=T)
+names <- substr(filenames,5,8)
+filenames <- system("ls *.jpg", intern=T)
+names <- substr(filenames,5,8)
+names
+names <- substr(filenames,6,13)
+names
+	oname = paste("frame", i, ".jpg", sep="")
+img <- vector(mode="list", length=length(a))#
+for (i in 1:length(img))#
+	for (j in names){#
+	#oname = paste("frame", j, ".jpg", sep="")#
+	img[[i]] <- readImage(paste("frame", j, ".jpg", sep=""))#
+	#assign(oname, readImage(paste(oname, sep="")))#
+	}
+img <- vector(mode="list", length=length(filenames))
+for (i in 1:length(img))#
+	for (j in names){#
+	#oname = paste("frame", j, ".jpg", sep="")#
+	img[[i]] <- readImage(paste("frame", j, ".jpg", sep=""))#
+	#assign(oname, readImage(paste(oname, sep="")))#
+	}
+library(EBImage)
+for (i in 1:length(img))#
+	for (j in names){#
+	#oname = paste("frame", j, ".jpg", sep="")#
+	img[[i]] <- readImage(paste("frame", j, ".jpg", sep=""))#
+	#assign(oname, readImage(paste(oname, sep="")))#
+	}
+system("pwd")
+system("ls")
+img
+names
+setwd("/Users/warsha/Documents/gavia_data/locator")
+filenames <- system("ls *.jpg", intern=T)
+names <- substr(filenames,6,13)
+names
+img <- vector(mode="list", length=length(filenames))#
+for (i in 1:length(img))#
+	for (j in names){#
+	#oname = paste("frame", j, ".jpg", sep="")#
+	img[[i]] <- readImage(paste("frame", j, ".jpg", sep=""))#
+	#assign(oname, readImage(paste(oname, sep="")))#
+	}
+img
+display(img)
+img <- vector(mode="array", length=length(filenames))
+img <- vector(mode="list", length=length(filenames))
+names(img)
+for (i in 1:length(img))#
+	for (j in names){#
+	#oname = paste("frame", j, ".jpg", sep="")#
+	img[[i]] <- readImage(paste("frame", j, ".jpg", sep=""))#
+	#assign(oname, readImage(paste(oname, sep="")))#
+	}
+names(img)
+display(img[[1]])
+length(img)
+library(ReadImages)
+library(ReadImages)
+img <- vector(mode="list", length=length(filenames))#
+for (i in 1:length(img))#
+	for (j in names){#
+	#oname = paste("frame", j, ".jpg", sep="")#
+	img[[i]] <- read.jpeg(paste("frame", j, ".jpg", sep=""))#
+	#assign(oname, readImage(paste(oname, sep="")))#
+	}
+x <- NULL#
+#
+for(i in 1:length(img)) {#
+ cat(paste("now get the points for image nr ",i,"\n"))#
+ plot(img[[i]])#
+ tmp <- locator(type ='p',pch=0.4,col='red',lwd=0.4,cex=0.1)#
+ if(length(tmp) == 0) break()#
+ x[[i]] <- tmp#
+ }
+length(img)
+x <- list()#
+#
+for(i in 1:length(img)) {#
+ cat(paste("now get the points for image nr ",i,"\n"))#
+ plot(img[[i]])#
+ tmp <- locator(type ='p',pch=0.4,col='red',lwd=0.4,cex=0.1)#
+ if(length(tmp) == 0) break()#
+ x[[i]] <- tmp#
+ }
+for(i in 1:6) {#
+ cat(paste("now get the points for image nr ",i,"\n"))#
+ plot(img[[i]])#
+ tmp <- locator(type ='p',pch=0.4,col='red',lwd=0.4,cex=0.1)#
+ if(length(tmp) == 0) break()#
+ x[[i]] <- tmp#
+ }
+x <- list()#
+#
+for(i in 1:100) {#
+ cat(paste("now get the points for image nr ",i,"\n"))#
+ plot(1:10,1:10)#
+ tmp <- locator()#
+ if(length(tmp) == 0) break()#
+ x[[i]] <- tmp#
+}
+x <- list()#
+#
+for(i in 1:100) {#
+ cat(paste("now get the points for image nr ",i,"\n"))#
+ plot(1:10,1:10)#
+ tmp <- locator()#
+ if(length(tmp) == 0) break()#
+ x[[i]] <- tmp#
+}
+x <- list()#
+#
+#
+for(i in 1:100) {#
+ cat(paste("now get the points for image nr ",i,"\n"))#
+ plot(1:10,1:10)#
+ tmp <- locator()#
+ if(length(tmp) == 0) break()#
+ x[[i]] <- tmp#
+}
+x <- list()#
+#
+#
+for(i in 1:100) {#
+ cat(paste("now get the points for image nr ",i,"\n"))#
+ plot(1:10,1:10)#
+ tmp <- locator()#
+ if(length(tmp) == 0) break()#
+ x[[i]] <- tmp#
+}
+x <- list()#
+#
+#
+for(i in 1:100) {#
+ cat(paste("now get the points for image nr ",i,"\n"))#
+ plot(1:10,1:10)#
+ tmp <- locator()#
+ if(length(tmp) == 0) break()#
+ x[[i]] <- tmp#
+}
+x <- list()#
+#
+#
+for(i in 1:100) {#
+ cat(paste("now get the points for image nr ",i,"\n"))#
+ plot(1:10,1:10)#
+ tmp <- locator()#
+ if(length(tmp) == 0) break()#
+ x[[i]] <- tmp#
+}
+x <- list()#
+#
+#
+for(i in 1:100) {#
+ cat(paste("now get the points for image nr ",i,"\n"))#
+ plot(1:10,1:10)#
+ tmp <- locator()#
+ if(length(tmp) == 0) break()#
+ x[[i]] <- tmp#
+}
+x <- list()#
+#
+#
+for(i in 1:100) {#
+ cat(paste("now get the points for image nr ",i,"\n"))#
+ plot(1:10,1:10)#
+ tmp <- locator()#
+ if(length(tmp) == 0) break()#
+ x[[i]] <- tmp#
+}
+x <- list()#
+#
+#
+for(i in 1:100) {#
+ cat(paste("now get the points for image nr ",i,"\n"))#
+ plot(1:10,1:10)#
+ tmp <- locator()#
+ if(length(tmp) == 0) break()#
+ x[[i]] <- tmp#
+}
+x
+x <- list()#
+#
+#
+for(i in 1:100) {#
+ cat(paste("now get the points for image nr ",i,"\n"))#
+ plot(1:10,1:10)#
+ tmp <- locator()#
+ if(length(tmp) == 0) break()#
+ x[[i]] <- tmp#
+}
+x <- list()#
+#
+#
+for(i in 1:100) {#
+cat(paste("now get the points for image nr ",i,"\n"))#
+plot(1:10,1:10)#
+tmp <- locator()#
+if(length(tmp) == 0) break()#
+x[[i]] <- tmp#
+}
+x <- list()#
+#
+for(i in 1:6) {#
+cat(paste("now get the points for image nr ",i,"\n"))#
+plot(img[[i]])#
+tmp <- locator(type ='p',pch=0.4,col='red',lwd=0.4,cex=0.1)#
+if(length(tmp) == 0) break()#
+x[[i]] <- tmp#
+}
+x <- list()#
+#
+for(i in 1:6) {#
+cat(paste("now get the points for image nr ",i,"\n"))#
+plot(img[[i]])#
+tmp <- locator(type ='p',pch=0.4,col='red',lwd=0.4,cex=0.1)#
+if(length(tmp) == 0) break()#
+x[[i]] <- tmp#
+}
+x <- list()#
+#
+for(i in 1:length(img)) {#
+cat(paste("now get the points for image nr ",i,"\n"))#
+plot(img[[i]])#
+tmp <- locator(type ='p',pch=0.4,col='red',lwd=0.4,cex=0.1)#
+if(length(tmp) == 0) break()#
+x[[i]] <- tmp#
+}
+x <- list()#
+#
+for(i in 1:length(img)) {#
+cat(paste("now get the points for image nr ",i,"\n"))#
+plot(img[[i]])#
+tmp <- locator(type ='p',pch=0.4,col='red',lwd=0.4,cex=0.1)#
+if(length(tmp) == 0) break()#
+x[[i]] <- tmp#
+}
+plot(img[[1]])
+plot(img[[2]])
+plot(img[[3]])
+img
+img <- vector(mode="list", length=length(filenames))#
+for (i in 1:length(img))#
+	for (j in names){#
+	oname = paste("frame", j, ".jpg", sep="")#
+	img[[i]] <- assign(oname, read.jpeg(paste("frame", j, ".jpg", sep=""))#
+	#assign(oname, readImage(paste(oname, sep="")))#
+	}
+img <- vector(mode="list", length=length(filenames))#
+for (i in 1:length(img)){#
+		for (j in names){#
+	oname = paste("frame", j, ".jpg", sep="")#
+	img[[i]] <- assign(oname, read.jpeg(paste("frame", j, ".jpg", sep=""))#
+	#assign(oname, readImage(paste(oname, sep="")))#
+	}#
+	}
+img <- vector(mode="list", length=length(filenames))#
+for (i in 1:length(img)){#
+	for (j in names){#
+	oname = paste("frame", j, ".jpg", sep="")#
+	img[[i]] <- assign(oname, read.jpeg(paste("frame", j, ".jpg", sep=""))#
+		}#
+	}
+img <- vector(mode="list", length=length(filenames))#
+for (i in 1:length(img)){#
+	for (j in names){#
+	oname = paste("frame", j, ".jpg", sep="")#
+	img[[i]] <- assign(oname, read.jpeg(paste("frame", j, ".jpg", sep="")))#
+		}#
+	}
+img
+names(img)
+plot(img[2])
+plot(img[[1]])
+plot(img[[2]])
+plot(img[[6]])
+for (i in names){#
+	oname = paste("frame", i, ".jpg", sep="")#
+	assign(oname, read.jpeg(paste(oname, sep="")))#
+}
+objects()
+img <- system("ls, *.jpg")
+img <- system("ls *.jpg")
+plot(img[[1]])
+oname
+img <- vector(mode="list", length=length(filenames))#
+for (i in 1:length(img)){#
+	for (j in names){#
+	#oname = paste("frame", j, ".jpg", sep="")#
+	img[[i]] <- read.jpeg(paste("frame", j, ".jpg", sep=""))#
+		}#
+	}
+img[[1]]
+img
+plot(img[[4]])
+for (j in names)#
+	oname = paste("frame", j, ".jpg", sep="")
+oname
+names
+objects()
+class(frame005743_0.jpg)
+is.array()
+is.array(frame005743_0.jpg)
+is.array(files)
+is.array(mg)
+is.array(img)
+for (i in names){#
+	oname = paste("frame", i, ".jpg", sep="")#
+	assign(oname, read.jpeg(paste(oname, sep="")))#
+}
+imgs <- ls()[sapply(mget(ls(), .GlobalEnv), is.array)]
+imgs
+imgs[[1]]
+plot(img[[1]])
+plot(imgs[[1]])
+plot(frame005741_0.jpg)
+x <- list()#
+#
+for(i in names) {#
+cat(paste("now get the points for image nr ",i,"\n"))#
+plot(paste("frame", i, ".jpg"))#
+tmp <- locator(type ='p',pch=0.4,col='red',lwd=0.4,cex=0.1)#
+if(length(tmp) == 0) break()#
+x[[i]] <- tmp#
+}
+plot(paste("frame", i, ".jpg"))
+img <- vector(mode="list", length=length(filenames))#
+for (i in 1:length(img)){#
+	for (j in names){#
+	img[[i]] <- read.jpeg(paste("frame", j, ".jpg", sep=""))#
+		}#
+	}
+img
+plot(img[[3]])
+img <- vector(mode="list", length=length(filenames))#
+#for (i in 1:length(img)){#
+	for (i in names){#
+	img[[i]] <- read.jpeg(paste("frame", i, ".jpg", sep=""))#
+		}
+img
+img <- vector(mode="list", length=length(filenames))#
+#for (i in 1:length(img)){#
+	for (i in names){#
+	tmp <- read.jpeg(paste("frame", i, ".jpg", sep=""))#
+	img[[i]] <- tmp#
+		}
+img
+plot(img[[1]])
+plot(img$1)
+img <- vector(mode="list", length=length(filenames))#
+for (i in 1:length(img)){#
+	for (j in names){#
+	tmp <- read.jpeg(paste("frame", j, ".jpg", sep=""))#
+	img[[i]] <- tmp#
+		}#
+	}
+img
+plot(img[[1]])
+plot(img[[3]])
+setwd(/Users/warsha/Documents/gavia_data/111117_survey_lm_1/files/images/)
+setwd("/Users/warsha/Documents/gavia_data/111117_survey_lm_1/files/images/")
+system("ls")
+system("cd 201111171312")
+system("ls *.jpg")
+files <- system("ls *.jpg", intern=T)
+system("pwd")
+files <- system("ls *.jpg", intern=T)
+setwd("/Users/warsha/Documents/gavia_data/111117_survey_lm_1/files/images/201111171312")
+files <- system("ls *.jpg", intern=T)
+files
+?sampl
+?sample
+samp <- sample(files, 25, replace=FALSE)
+samp
+names <- substr(fnams,6,13)
+fnams <- sample(files, 25, replace=FALSE)
+names <- substr(fnams,6,13)
+names
+for (i in names){#
+	oname = paste("frame", i, ".jpg", sep="")#
+	imgs <- assign(oname, read.jpeg(paste(oname, sep="")))#
+}
+imgs
+length(imgs)
+im <- list()#
+for (i in names){#
+	oname = paste("frame", i, ".jpg", sep="")#
+	imgs <- assign(oname, read.jpeg(paste("frame", i, ".jpg", sep="")))#
+	im[[i]] <- imgs#
+	}
+im
+plot(im[[1]])
+plot(im[[4]])
+length(im)
+fnaes
+fnames
+fnams
+plot(im[[6]])
+plot(im[[17]])
+plot(im[[25]])
+im
+x <- list()#
+#
+for(i in 1:length(im)) {#
+cat(paste("now get the points for image nr ",i,"\n"))#
+plot(im[[i]])#
+tmp <- locator(type ='p',pch=0.4,col='red',lwd=0.4,cex=0.1)#
+if(length(tmp) == 0) break()#
+x[[i]] <- tmp#
+}
+x
+unlist(x)
+x
+as.data.frame(x)
+x
+x <- list()#
+#
+for(i in 1:length(im)) {#
+cat(paste("now get the points for image nr ",i,"\n"))#
+plot(im[[i]])#
+tmp <- locator(type ='p',pch=0.4,col='red',lwd=0.4,cex=0.1)#
+if(length(tmp) == 0) break()#
+x[[i]] <- tmp#
+}
+fnam = paste("frame", i, ,"_en",".jpg", sep="")
+fnam = paste("frame", i, "_en",".jpg", sep="")
+fnam
+for (i in 1:length(im)){#
+	bl <- (im[[i]]/blur(im[[i]], r=0, s=150))/2#
+	g <- (0.2+f)^3.5 #
+	setwd("/Users/warsha/Documents/gavia_data/111117_survey_lm_1/files/images/201111171312/samp")#
+	fnam = paste("frame", i, "_en",".jpg", sep="")#
+	writeImage(g, fnam)#
+}
+for (i in 1:length(im)){#
+	bl <- (im[[i]]/blur(im[[i]], r=0, s=150))/2#
+	g <- (0.2+bl)^3.5 #
+	fnam = paste("frame", i, "_en",".jpg", sep="")#
+	setwd("/Users/warsha/Documents/gavia_data/111117_survey_lm_1/files/images/201111171312/samp")#
+	writeImage(g, fnam)#
+}
+	bl <- (im[[1]]/blur(im[[1]], r=0, s=150))/2
+	g <- (0.2+bl)^3.5
+	fnam = paste("frame", i, "_en",".jpg", sep="")
+	setwd("/Users/warsha/Documents/gavia_data/111117_survey_lm_1/files/images/201111171312/samp")
+	writeImage(g, fnam)
+	fnam = paste("frame", i, ".jpg", sep="")
+	writeImage(g, fnam)
+display(g)
+display)im[[1]]
+library(EBImage)
