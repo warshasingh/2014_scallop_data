@@ -1,4 +1,4 @@
-Scallop_data_2014
+Comparison of scallop size distribution
 =================
 
 Data for paper: A small-scale comparison of Iceland scallop size distributions obtained from a camera based autonomous underwater vehicle and dredge survey.
